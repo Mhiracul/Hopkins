@@ -63,7 +63,7 @@ function Navbar() {
                 </Link>
 
                 <Link
-                  to=""
+                  to="contact"
                   smooth={true}
                   duration={500}
                   className="text-black cursor-pointer font-Montserrat text-[12px]"
@@ -71,7 +71,7 @@ function Navbar() {
                   Contact
                 </Link>
                 <Link
-                  to="/"
+                  to="about"
                   smooth={true}
                   duration={500}
                   className="text-black cursor-pointer font-Montserrat text-[12px]"
