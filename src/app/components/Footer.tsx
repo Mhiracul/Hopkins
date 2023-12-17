@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <p className="lg:hidden mt-10 text-center md:text-xs text-[8px] border-t  border-opacity-40 text-black text-opacity-[35%] py-3 font-semibold">
+          <p className="lg:hidden mt-10 text-center md:text-xs text-[8px] border-t border-black  border-opacity-40 text-black text-opacity-[35%] py-3 font-semibold">
             Copyright 2023 Hopkins Technical Company. All Rights Reserved.
           </p>
         </div>
