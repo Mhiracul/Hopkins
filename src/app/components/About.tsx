@@ -4,14 +4,14 @@ import Sharp from "../../../public/Sharp.svg";
 
 const About = () => {
   return (
-    <div className="h-full w-full" id="about">
+    <div className="h-full w-full bg-black text-white" id="about">
       <div className="container mx-auto py-20 md:px-16 px-4">
         <div className="flex flex-col items-center">
-          <h1 className="text-white text-center font-bold text-3xl uppercase">
+          <h1 className="text-white text-center font-bold md:text-3xl text-xl uppercase">
             about us
           </h1>
 
-          <h2 className="text-white py-20 text-center text-xl font-medium">
+          <h2 className="text-white py-20 text-center md:text-xl text-base font-medium">
             Hopkins: Your Trusted Source for Sharp Digital Photocopiers
           </h2>
 

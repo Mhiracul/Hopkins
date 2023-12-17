@@ -27,7 +27,7 @@ const Testimonial = () => {
       <div className="container mx-auto py-20 md:px-16 px-4 ">
         <div className="flex lg:flex-row flex-col justify-between lg:items-start gap-10 md:items-start items-center">
           <div className="flex flex-col  gap-10">
-            <h2 className="text-4xl md:text-start text-center  text-black font-semibold">
+            <h2 className="md:text-4xl text-2xl md:text-start text-center  text-black font-semibold">
               Trusted and Rated <br /> by Our Clients
             </h2>
             <Image src={Tested} alt="logo" className="" />

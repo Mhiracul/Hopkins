@@ -16,7 +16,7 @@ const CustomerService: React.FC = () => {
         <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10">
           <div className=" flex flex-col md:items-start items-center  text-black">
             {/* Text */}
-            <h2 className="text-4xl md:text-start text-center font-semibold mb-6">
+            <h2 className="md:text-4xl text-2xl md:text-start text-center font-semibold mb-6">
               Connect With Our <br /> Customer Service Agent.
             </h2>
 

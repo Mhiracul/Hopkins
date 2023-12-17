@@ -18,18 +18,18 @@ const Hero: React.FC = () => {
       }}
     >
       <div className="absolute top-0 right-0 p-4 md:text-white text-black">
-        <div className="flex items-center text-xs font-normal space-x-1 ">
+        <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 ">
           <CiMail />
 
           <span>Hopkinstechnicalc@yahoo.com</span>
         </div>
-        <div className="flex items-center text-xs font-normal space-x-1 mt-1">
+        <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 mt-1">
           <MdOutlinePhoneForwarded />
 
           <span>08035420101</span>
         </div>
 
-        <div className="flex items-center text-xs font-normal space-x-1 mt-1">
+        <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 mt-1">
           <FaWhatsapp />
 
           <span>09092259966</span>
@@ -48,12 +48,12 @@ const Hero: React.FC = () => {
         </div>
         <hr className="border-black border-[0.5px] h-[40vh] my-0 mx-4" />
       </div>
-      <div className="px-5 xl:px-6 lg:px-6 text-black md:text-start text-center">
-        <h2 className="font-Montserrat relative flex items-center font-medium text-[36px] md:text-[42px] md:leading-[63px] leading-[60px]">
+      <div className="py-20 px-5 xl:px-6 lg:px-6 text-black md:text-start flex flex-col md:items-start items-center text-center">
+        <h2 className="font-Montserrat relative flex items-center font-medium text-xl md:text-[42px] md:leading-[63px] leading-[30px]">
           Empower Your Office
           <br className="sm:flex hidden" /> Unleash the Copier Hero!
         </h2>
-        <h2 className="font-Montserrat font-normal text-[15px] text-black text-md mt-5">
+        <h2 className="font-Montserrat font-normal md:text-[15px] text-xs text-black  mt-5">
           Revolutionize Your Workflow with Precision and Speed! Introducing{" "}
           <br className="sm:flex hidden" />
           Hopkins’ Cutting-Edge Copiers – Where Innovation Meets Impeccable

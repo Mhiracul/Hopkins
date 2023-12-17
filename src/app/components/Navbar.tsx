@@ -3,10 +3,8 @@ import React, { useState } from "react";
 import Logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
-
-import { Button } from "react-scroll";
+import { FaBars } from "react-icons/fa";
 import { FiSearch, FiX } from "react-icons/fi";
-import { BiMenuAltRight } from "react-icons/bi";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,16 +14,16 @@ function Navbar() {
   };
 
   return (
-    <div className="bg-white px-[6%] py-2 flex flex-row justify-between align-middle items-center shadow-lg">
+    <div className="bg-white shadow-sm shadow-[#00BF63] px-[6%] py-2 flex flex-row justify-between align-middle items-center ">
       <div className="flex flex-row align-middle gap-2 items-center">
         <Image src={Logo} alt="logo" className="w-[90px]" />
       </div>
       <div className="block md:hidden">
         <button onClick={handleMenuToggle}>
-          <BiMenuAltRight size={30} color="#000" />
+          <FaBars size={18} color="#000" />
         </button>
         {mobileMenuOpen && (
-          <div className="absolute top-12 right-6 mt-2 py-2 w-[300px] bg-white border rounded z-10">
+          <div className="absolute top-12 right-6 mt-2 py-2 w-[300px] bg-white shadow-sm shadow-[#00BF63] border rounded z-10">
             <div
               className={`${
                 mobileMenuOpen ? "flex" : "hidden"
