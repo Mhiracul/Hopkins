@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 <FaLongArrowAltRight color="white" size={12} />
               </div>
             </div>
-            <p className="text-black hidden lg:block text-opacity-[35%] py-3 font-semibold">
+            <p className="text-black text-xs hidden lg:block text-opacity-[35%] py-3 font-semibold">
               Copyright 2023 Hopkins Technical Company. All Rights Reserved.
             </p>
           </div>

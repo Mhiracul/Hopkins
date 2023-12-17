@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Customer from "../../../public/customer.png";
+import Link from "next/link";
 
 const CustomerService: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const CustomerService: React.FC = () => {
 
             {/* Contact Us Button */}
             <button className="bg-[#00BF63]  z-[99999] px-4 w-40 py-3 rounded-md text-white font-Montserrat text-lg mt-10">
-              Contact Us
+              <Link href="https://wa.me/+2349092259966"> Contact Us </Link>
             </button>
           </div>
 
