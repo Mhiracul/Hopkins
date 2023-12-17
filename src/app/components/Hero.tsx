@@ -1,9 +1,41 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { MdOutlinePhoneForwarded } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
 import styles from "./hero.module.css";
+import Link from "next/link";
 
+interface PhoneLinkProps {
+  phoneNumber: string;
+}
+
+const PhoneLink: React.FC<PhoneLinkProps> = ({ phoneNumber }) => {
+  return (
+    <a
+      href={`tel:${phoneNumber}`}
+      className="flex items-center md:text-xs text-[10px] font-normal space-x-1 cursor-pointer"
+    >
+      <MdOutlinePhoneForwarded />
+      <span>{phoneNumber}</span>
+    </a>
+  );
+};
+
+interface EmailLinkProps {
+  children: ReactNode;
+}
+
+const EmailLink: React.FC<EmailLinkProps> = ({ children }) => {
+  return (
+    <Link
+      href="mailto:Hopkinstechnicalc@yahoo.com"
+      className="flex gap-1 items-center md:text-xs text-[10px] font-normal space-x-1 cursor-pointer"
+    >
+      <CiMail />
+      {children}
+    </Link>
+  );
+};
 const Hero: React.FC = () => {
   return (
     <div
@@ -19,20 +51,19 @@ const Hero: React.FC = () => {
     >
       <div className="absolute top-0 right-0 p-4 md:text-white text-black">
         <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 ">
-          <CiMail />
-
-          <span>Hopkinstechnicalc@yahoo.com</span>
+          <EmailLink>Hopkinstechnicalc@yahoo.com</EmailLink>
         </div>
         <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 mt-1">
-          <MdOutlinePhoneForwarded />
-
-          <span>08035420101</span>
+          <PhoneLink phoneNumber="08035420101" />
         </div>
 
-        <div className="flex items-center md:text-xs text-[10px] font-normal space-x-1 mt-1">
+        <div className="flex items-center cursor-pointer md:text-xs text-[10px] font-normal space-x-1 mt-1">
           <FaWhatsapp />
 
-          <span>09092259966</span>
+          <span>
+            {" "}
+            <Link href="https://wa.me/+2349092259966">09092259966</Link>
+          </span>
         </div>
       </div>
       <div className="hidden sm:flex flex-row items-center px-4">
@@ -65,7 +96,7 @@ const Hero: React.FC = () => {
         {/* Green horizontal line */}
         <hr className="border-green-500 border-[1px] my-2 w-2/3" />
         <button className="bg-[#00BF63] px-10 py-3 rounded-md text-white font-Montserrat text-lg mt-10">
-          Contact Us
+          <Link href="https://wa.me/+2349092259966">Contact Us</Link>
         </button>
       </div>
       {/* Style for smaller screens */}

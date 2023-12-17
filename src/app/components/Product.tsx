@@ -5,6 +5,7 @@ import Print3 from "../../../public/print3.png";
 import Print4 from "../../../public/print4.png";
 import Print5 from "../../../public/print5.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Product = () => {
   return (
@@ -56,7 +57,7 @@ const Product = () => {
             </p>
 
             <button className="bg-[#BB3526] w-1/2 py-3 rounded-md text-white  text-lg mt-10">
-              Order Now
+              <Link href="https://wa.me/+2349092259966"> Order Now </Link>
             </button>
           </div>
         </div>
