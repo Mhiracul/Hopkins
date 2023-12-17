@@ -12,11 +12,9 @@ const Service = () => {
     <div
       className="bg-[#5FD595] h-full
      w-full"
+      id="services"
     >
-      <div
-        className="container mx-auto lg:px-32 md:px-10 px-4 py-20"
-        id="services"
-      >
+      <div className="container mx-auto lg:px-32 md:px-10 px-4 py-20">
         <h2 className="text-black text-lg text-center  font-bold w-full">
           SERVICES
         </h2>

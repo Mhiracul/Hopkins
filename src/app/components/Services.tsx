@@ -6,7 +6,10 @@ import Repairs from "../../../public/repairs.svg";
 
 const Services = () => {
   return (
-    <div className=" flex bg-black text-white items-center h-full py-20 w-full">
+    <div
+      className=" flex bg-black text-white items-center h-full py-20 w-full"
+      id="service"
+    >
       <div className=" container mx-auto lg:px-20 md:px-10 px-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
         <div className="flex flex-col items-center space-y-2">
           <Image src={Sales} alt="logo" className="w-[40px]" />

@@ -21,14 +21,14 @@ const CustomerService: React.FC = () => {
             </h2>
 
             {/* Contact Us Button */}
-            <button className="bg-[#00BF63] px-4 w-40 py-3 rounded-md text-white font-Montserrat text-lg mt-10">
+            <button className="bg-[#00BF63]  z-[99999] px-4 w-40 py-3 rounded-md text-white font-Montserrat text-lg mt-10">
               Contact Us
             </button>
           </div>
 
           {/* Image on the right side */}
           <div className="flex justify-center">
-            <Image src={Customer} alt="logo" className="" />
+            <Image src={Customer} alt="logo" className=" z-[99999]" />
           </div>
         </div>
       </div>

@@ -1,8 +1,13 @@
+"use client";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Link from "next/link";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <div className="bg-[#60D796]  h-full md:py-10 py-0 flex items-center">
       <div className="container mx-auto py-20 px-6 bg-[#95DCC2]">
@@ -37,10 +42,24 @@ const Footer: React.FC = () => {
 
               <ul className="text-black text-opacity-[35%] font-semibold md:text-xs text-[8px]">
                 <li>
-                  <Link href="/">Find Products</Link>
+                  <ScrollLink
+                    to="product"
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer"
+                  >
+                    Find Products
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="/">Services</Link>
+                  <ScrollLink
+                    to="services"
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer"
+                  >
+                    Services
+                  </ScrollLink>
                 </li>
               </ul>
             </div>
@@ -51,13 +70,34 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="text-black text-opacity-[35%] font-semibold md:text-xs text-[8px]">
                 <li>
-                  <Link href="/">About Us</Link>
+                  <ScrollLink
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer"
+                  >
+                    About Us
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="/">How It Works</Link>
+                  <ScrollLink
+                    to="service"
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer"
+                  >
+                    How It Works
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link href="/">Contact Us</Link>
+                  <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer"
+                  >
+                    Contact Us
+                  </ScrollLink>
                 </li>
               </ul>{" "}
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../public/logo.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
@@ -12,6 +12,22 @@ function Navbar() {
   const handleMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  useEffect(() => {
+    const closeMobileMenu = () => {
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    // Add event listener to close the mobile menu when clicking outside
+    document.addEventListener("click", closeMobileMenu);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("click", closeMobileMenu);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <div className="bg-white shadow-sm shadow-[#00BF63] px-[6%] py-2 flex flex-row justify-between align-middle items-center ">
@@ -27,22 +43,9 @@ function Navbar() {
             <div
               className={`${
                 mobileMenuOpen ? "flex" : "hidden"
-              } md:hidden flex-col h-[350px] p-5 w-[300px] z-10 mt-0`}
+              } md:hidden flex-col h-full p-5 w-[300px] z-10 mt-0`}
             >
-              <div className="h-[50px] justify-between items-center gap-2 w-full p-3 border rounded-md md:flex">
-                <div className="flex flex-row gap-5 items-center ">
-                  <div className="w-4 h-4 justify-center items-center flex">
-                    <div className="w-4 h-4 relative">
-                      <FiSearch />
-                    </div>
-                  </div>
-                  <input
-                    placeholder="Search"
-                    className="placeholder:text-neutral-400 text-gray-900 text-base font-normal leading-normal tracking-tight w-[50%] focus:border-0 focus:outline-none focus:ring-0 font-Montserrat"
-                  />
-                </div>
-              </div>
-              <div className="mt-10 flex flex-col gap-6">
+              <div className="mt-3 flex flex-col gap-6">
                 <Link
                   to="product"
                   smooth={true}
@@ -82,17 +85,6 @@ function Navbar() {
         )}
       </div>
       <div className="flex-row gap-10 md:flex hidden"></div>
-      <div className="h-6 gap-3 items-center  w-[500px] p-5 border rounded-md md:flex hidden">
-        <div className="w-4 h-4 justify-center items-center flex">
-          <div className="w-4 h-4 relative">
-            <FiSearch size={16} color="#000" />
-          </div>
-        </div>
-        <input
-          placeholder="Search"
-          className="placeholder:text-neutral-400 text-gray-900 text-xs font-normal leading-normal tracking-tight w-[50%] focus:border-0 focus:outline-none focus:ring-0 font-Montserrat"
-        />
-      </div>
 
       <div className="md:flex hidden flex-row gap-10 items-center">
         <Link

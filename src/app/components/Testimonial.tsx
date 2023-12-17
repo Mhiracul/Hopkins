@@ -23,7 +23,7 @@ const StarRating: React.FC = () => {
 };
 const Testimonial = () => {
   return (
-    <div className="bg-[#5FD595] h-full w-full">
+    <div className="bg-[#5FD595] h-full w-full" id="test">
       <div className="container mx-auto py-20 md:px-16 px-4 ">
         <div className="flex lg:flex-row flex-col justify-between lg:items-start gap-10 md:items-start items-center">
           <div className="flex flex-col  gap-10">

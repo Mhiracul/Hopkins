@@ -3,6 +3,7 @@ import Print1 from "../../../public/print1.png";
 import Print2 from "../../../public/print2.png";
 import Print3 from "../../../public/print3.png";
 import Print4 from "../../../public/print4.png";
+import Print5 from "../../../public/print5.png";
 import Image from "next/image";
 
 const Product = () => {
@@ -17,24 +18,24 @@ const Product = () => {
           <div className="flex flex-col lg:flex-col-reverse md:items-start items-center">
             <div className="flex gap-5">
               <Image
-                src={Print1}
+                src={Print3}
                 alt="logo"
-                className="object-cover  sm:w-full w-32 max-w-full max-h-[200px]"
+                className="object-cover mt-3  sm:w-full w-32 max-w-full max-h-[200px]"
               />
               <Image
-                src={Print2}
+                src={Print4}
                 alt="logo"
                 className="object-cover sm:w-full w-32 max-w-full max-h-[200px]"
               />
             </div>
             <div className="flex  gap-5">
               <Image
-                src={Print3}
+                src={Print1}
                 alt="logo"
                 className="mt-3 object-cover sm:w-full w-32 max-w-full max-h-[200px]"
               />
               <Image
-                src={Print4}
+                src={Print2}
                 alt="logo"
                 className="mt-1 object-cover sm:w-full w-32 max-w-full max-h-[200px]"
               />
